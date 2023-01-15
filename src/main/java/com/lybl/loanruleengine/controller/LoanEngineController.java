@@ -1,6 +1,6 @@
 package com.lybl.loanruleengine.controller;
 
-import com.lybl.loanruleengine.LoanEngineConstants;
+import com.lybl.loanruleengine.constants.LoanEngineConstants;
 import com.lybl.loanruleengine.dtos.GenerateLoanOfferRequestDto;
 import com.lybl.loanruleengine.dtos.GenerateLoanOfferResponseDto;
 import com.lybl.loanruleengine.dtos.LoanOffer;

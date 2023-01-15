@@ -4,7 +4,7 @@ import com.lybl.loanruleengine.enums.RuleType;
 import com.lybl.loanruleengine.models.PersonalLoanRule;
 import com.lybl.loanruleengine.models.Rule;
 import com.lybl.loanruleengine.models.TwoWheelerLoanRule;
-import com.lybl.loanruleengine.strategies.PersonalLoanRuleProcessingStrategy;
+
 
 public class RuleFactory {
 

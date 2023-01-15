@@ -9,6 +9,5 @@ public class LoanOffer {
     private double interestRate;
     //tenure in months
     private Integer tenure;
-    private LoanType loanType;
     private String category;
 }

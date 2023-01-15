@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class DefaultGsonRuleParsingStrategy implements RuleParserStrategy {
 
-    private RuleFactory ruleFactory;
-
     @Override
     public Rule parseRule(String ruleJson, RuleType ruleType) {
         Class<? extends Rule> ruleInstanceClass = RuleFactory.getRuleInstance(ruleType);
