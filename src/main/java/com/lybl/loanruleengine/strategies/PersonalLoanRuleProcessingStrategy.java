@@ -21,6 +21,7 @@ public class PersonalLoanRuleProcessingStrategy implements RuleProcessingStrateg
             loanOffer.setCategory(rule.getRuleType().name());
             loanOffer.setInterestRate(personalLoanRule.getInterestRate());
             loanOffer.setTenure(personalLoanRule.getTenure());
+            loanOffer.setBankName(personalLoanRule.getBankName());
         }
         return loanOffer;
     }

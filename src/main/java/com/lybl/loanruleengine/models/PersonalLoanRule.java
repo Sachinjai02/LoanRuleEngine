@@ -16,6 +16,6 @@ public class PersonalLoanRule extends Rule {
     private double interestRate;
     private int tenure;
     private int loanAmount;
-
+    private String bankName;
 
 }

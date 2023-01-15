@@ -13,4 +13,5 @@ public class LoanOffer {
     private int tenure;
     private String category;
     private int cibil;
+    private String bankName;
 }

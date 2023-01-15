@@ -61,19 +61,22 @@ public class RulesRepository {
 
     private void populateRules(List<Rule> rules) {
         Rule rule = new Rule(RuleType.PERSONAL, 1, 1,
-                "{\"cibilLowerRange\":851,\"cibilHigherRange\":900,\"salaryLowerRange\":100000," +
-                        "\"salaryHigherRange\":2147483647,\"interestRate\":12.5,\"tenure\":3,\"loanAmount\":800000}");
+                "{\"cibilLowerRange\":750,\"cibilHigherRange\":900,\"salaryLowerRange\":100000," +
+                        "\"salaryHigherRange\":2147483647,\"interestRate\":12.5,\"tenure\":3,\"loanAmount\":800000" +
+                        ",\"bankName\":\"ICICI Bank\"}");
         rules.add(rule);
 
         rule = new Rule(RuleType.PERSONAL, 1, 2,
-                "{\"cibilLowerRange\":800,\"cibilHigherRange\":850,\"salaryLowerRange\":75000," +
-                        "\"salaryHigherRange\":2147483647,\"interestRate\":13,\"tenure\":4,\"loanAmount\":600000}");
+                "{\"cibilLowerRange\":800,\"cibilHigherRange\":900,\"salaryLowerRange\":75000," +
+                        "\"salaryHigherRange\":2147483647,\"interestRate\":13,\"tenure\":4,\"loanAmount\":600000" +
+                        ",\"bankName\":\"HDFC Bank\"}");
 
         rules.add(rule);
 
         rule = new Rule(RuleType.PERSONAL, 1, 3,
-                "{\"cibilLowerRange\":750,\"cibilHigherRange\":799,\"salaryLowerRange\":50000," +
-                        "\"salaryHigherRange\":2147483647,\"interestRate\":13.5,\"tenure\":5,\"loanAmount\":500000}");
+                "{\"cibilLowerRange\":750,\"cibilHigherRange\":900,\"salaryLowerRange\":50000," +
+                        "\"salaryHigherRange\":2147483647,\"interestRate\":13.5,\"tenure\":5,\"loanAmount\":500000" +
+                        ",\"bankName\":\"Yes Bank\"}");
 
         rules.add(rule);
 
