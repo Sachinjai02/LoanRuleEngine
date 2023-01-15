@@ -10,11 +10,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/loan")
+@RestController
+@RequestMapping("/loan")
 public class LoanEngineController {
 
     private LoanEngineService loanEngineService;
@@ -31,7 +33,7 @@ public class LoanEngineController {
         try {
             List<LoanOffer> offers = loanEngineService.generateLoanOffers(requestDto);
             responseDto.setOffers(offers);
-            responseDto.setMessage(offers.size() > 0 ? LoanEngineConstants.NO_LOAN_OFFER_AVAILABLE : LoanEngineConstants.EXCITING_OFFERS_AVAILABLE);
+            responseDto.setMessage(offers.size() == 0 ? LoanEngineConstants.NO_LOAN_OFFER_AVAILABLE : LoanEngineConstants.EXCITING_OFFERS_AVAILABLE);
         }catch(Exception e) {
             e.printStackTrace();
             responseDto.setErrorMessage(e.getMessage());

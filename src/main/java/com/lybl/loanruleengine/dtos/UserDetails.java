@@ -1,10 +1,12 @@
 package com.lybl.loanruleengine.dtos;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 public class UserDetails {
 
     private int cibil;
