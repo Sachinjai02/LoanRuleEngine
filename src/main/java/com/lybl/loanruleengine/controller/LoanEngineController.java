@@ -1,9 +1,8 @@
 package com.lybl.loanruleengine.controller;
 
-import com.lybl.loanruleengine.constants.LoanEngineConstants;
 import com.lybl.loanruleengine.dtos.GenerateLoanOfferRequestDto;
 import com.lybl.loanruleengine.dtos.GenerateLoanOfferResponseDto;
-import com.lybl.loanruleengine.dtos.LoanOffer;
+import com.lybl.loanruleengine.exception.InvalidPANDetailsException;
 import com.lybl.loanruleengine.services.LoanEngineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/loan")
@@ -32,7 +29,10 @@ public class LoanEngineController {
         HttpStatus responseStatus = HttpStatus.OK;
         try {
             responseDto.setOffer(loanEngineService.generateLoanOffers(requestDto));
-        }catch(Exception e) {
+        } catch (InvalidPANDetailsException p) {
+            responseDto.setErrorMessage(p.getMessage());
+            responseStatus = HttpStatus.BAD_REQUEST;
+        } catch(Exception e) {
             e.printStackTrace();
             responseDto.setErrorMessage(e.getMessage());
             responseStatus = HttpStatus.INTERNAL_SERVER_ERROR;
