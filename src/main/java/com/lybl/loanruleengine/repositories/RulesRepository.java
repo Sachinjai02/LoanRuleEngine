@@ -18,7 +18,7 @@ public class RulesRepository {
 
     private Date lastCachedRulesTime;
     //default value of 0 ->  meaning no caching
-    @Value("cacheExpiryInMillis:0")
+    @Value("${cacheExpiryInMillis:0}")
     private Long cacheExpiryInMillis;
 
     @Autowired
