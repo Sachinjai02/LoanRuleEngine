@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class LoanOffer {
-    private Integer amount;
+    private int amount;
     private double interestRate;
     //tenure in months
-    private Integer tenure;
+    private int tenure;
     private String category;
+    private int cibil;
 }

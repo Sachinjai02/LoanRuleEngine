@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class UserDetails {
-
+    private String name;
     private int cibil;
     //age in years
     private float age;

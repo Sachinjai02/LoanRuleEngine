@@ -31,9 +31,7 @@ public class LoanEngineController {
         GenerateLoanOfferResponseDto responseDto = new GenerateLoanOfferResponseDto();
         HttpStatus responseStatus = HttpStatus.OK;
         try {
-            List<LoanOffer> offers = loanEngineService.generateLoanOffers(requestDto);
-            responseDto.setOffers(offers);
-            responseDto.setMessage(offers.size() == 0 ? LoanEngineConstants.NO_LOAN_OFFER_AVAILABLE : LoanEngineConstants.EXCITING_OFFERS_AVAILABLE);
+            responseDto.setOffer(loanEngineService.generateLoanOffers(requestDto));
         }catch(Exception e) {
             e.printStackTrace();
             responseDto.setErrorMessage(e.getMessage());

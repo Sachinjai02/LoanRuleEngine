@@ -7,7 +7,9 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class GenerateLoanOfferResponseDto extends BaseResponseDto {
-    private OfferedLoanDetails offer;
+public class OfferedLoanDetails {
 
+    private List<LoanOffer> offers;
+    private String message;
+    private int cibil;
 }
